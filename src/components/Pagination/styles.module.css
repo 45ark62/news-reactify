@@ -8,7 +8,7 @@
 .pageNumber, .arrow{
    
     border:none;
-    background-color: aliceblue;
+    background-color: white;
     cursor: pointer;
 }
 .pageNumber:disabled,.arrow:disabled{
