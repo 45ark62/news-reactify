@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
-import LatestNews from "@components/LatestNews";
-import NewsByFilters from "@components/NewsByFilters";
+import LatestNews from "../../components/LatestNews";
+import NewsByFilters from "../../components/NewsByFilters";
 
 function Main() {
   return (

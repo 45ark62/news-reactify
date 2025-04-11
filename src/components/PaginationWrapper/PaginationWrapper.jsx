@@ -1,5 +1,5 @@
 import React from 'react'
-import Pagination from "@components/Pagination";
+import Pagination from "../Pagination";
 
 
 function PaginationWrapper({top,bottom,children,...paginationProps}) {

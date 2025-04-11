@@ -1,5 +1,5 @@
 import React from "react";
-import Skeleton from "@components/Skeleton";
+import Skeleton from "../../components/Skeleton";
 
 function withSkeleton(Component, type, count,direction) {
   return function WithSkeleton(props) {

@@ -1,7 +1,7 @@
-import { formatTimeAgo } from "@helpers/formatTimeAgo";
+import { formatTimeAgo } from "../../helpers/formatTimeAgo";
 import React from "react";
 import styles from "./styles.module.css";
-import Image from "@components/Image";
+import Image from "../Image";
 
 function NewsBanner({ item }) {
   return (
