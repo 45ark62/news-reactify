@@ -15,13 +15,13 @@ function Categories({ categories, setSelectedCategory, selectedCategory }) {
       {categories.map((category) => {
         return (
           <button
+            key={category.id}
             onClick={() => {
               setSelectedCategory(category);
             }}
             className={
               selectedCategory === category ? styles.active : styles.item
             }
-            key={category.id}
           >
             {category}
           </button>
