@@ -1,9 +1,9 @@
-import { getLatestNews } from "../../api/apiNews";
-import { useFetch } from "../../helpers/hooks/useFetch";
-import { DATA_MOCK } from "../../constants";
+import { getLatestNews } from "@api/apiNews";
+import { useFetch } from "@helpers/hooks/useFetch";
+import { DATA_MOCK } from "@constants";
 import React from "react";
 import styles from "./styles.module.css";
-import BannersList from "../BannersList";
+import BannersList from "@components/BannersList";
 
 function LatestNews() {
   const { data, isLoading } = useFetch(getLatestNews);

@@ -1,9 +1,9 @@
-import { getCategories } from "../../api/apiNews";
-import { useFetch } from "../../helpers/hooks/useFetch";
+import { getCategories } from "@api/apiNews";
+import { useFetch } from "@helpers/hooks/useFetch";
 import React from "react";
 import styles from "./styles.module.css";
-import Categories from "../Categories";
-import Search from "../Search";
+import Categories from "@components/Categories";
+import Search from "@components/Search";
 
 function NewsFilters({ filters, changeFilter }) {
   const { data: dataCategories } = useFetch(getCategories);
