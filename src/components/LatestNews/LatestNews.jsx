@@ -1,12 +1,21 @@
-import React from 'react'
+import { getLatestNews } from "../../api/apiNews";
+import { useFetch } from "../../helpers/hooks/useFetch";
+import { DATA_MOCK } from "../../constants";
+import React from "react";
 import styles from "./styles.module.css";
-import BannersList from '../BannersList/BannersList';
-function LatestNews({banners,isLoading}) {
+import BannersList from "../BannersList";
+
+function LatestNews() {
+  const { data, isLoading } = useFetch(getLatestNews);
   return (
     <section className={styles.section}>
-      <BannersList banners={banners} isLoading={isLoading} />
+      <BannersList
+        banners={data?.news ? data.news : DATA_MOCK}
+        isLoading={isLoading}
+      />
+      {/* data && data.news*/}
     </section>
   );
 }
 
-export default LatestNews
+export default LatestNews;
