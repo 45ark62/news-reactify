@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./styles.module.css";
-import withSkeleton from '../../helpers/hocs/withSkeleton';
-import NewsBanner from '../NewsBanner';
+import withSkeleton from '@helpers/hocs/withSkeleton';
+import NewsBanner from '@components/NewsBanner';
 function BannersList({banners}) {
   return (
     <ul className={styles.banners}>

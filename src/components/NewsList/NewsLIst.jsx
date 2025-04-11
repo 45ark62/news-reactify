@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
-import NewsItem from "../NewsItem";
-import withSkeleton from "../../helpers/hocs/withSkeleton";
+import NewsItem from "@components/NewsItem";
+import withSkeleton from "@helpers/hocs/withSkeleton";
 
 function NewsList({ news }) {
   return (

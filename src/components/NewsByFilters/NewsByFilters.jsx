@@ -1,13 +1,13 @@
-import { useFilters } from "../../helpers/hooks/useFilters";
-import { useDebounce } from "../../helpers/hooks/useDebounce";
-import { useFetch } from "../../helpers/hooks/useFetch";
-import { getNews } from "../../api/apiNews";
-import { DATA_MOCK, PAGE_SIZE, TOTAL_PAGES } from "../../constants";
+import { useFilters } from "@helpers/hooks/useFilters";
+import { useDebounce } from "@helpers/hooks/useDebounce";
+import { useFetch } from "@helpers/hooks/useFetch";
+import { getNews } from "@api/apiNews";
+import { DATA_MOCK, PAGE_SIZE, TOTAL_PAGES } from "@constants";
 import React from "react";
 import styles from "./styles.module.css";
-import NewsList from "../NewsList";
-import NewsFilters from "../NewsFilters";
-import PaginationWrapper from "../PaginationWrapper";
+import NewsList from "@components/NewsList";
+import NewsFilters from "@components/NewsFilters";
+import PaginationWrapper from "@components/PaginationWrapper";
 
 function NewsByFilters() {
   const { filters, changeFilter } = useFilters({
