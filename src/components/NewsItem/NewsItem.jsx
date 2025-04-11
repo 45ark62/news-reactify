@@ -1,6 +1,6 @@
+import { formatTimeAgo } from "../../helpers/formatTimeAgo";
 import React from "react";
 import styles from "./styles.module.css";
-import { formatTimeAgo } from "../../helpers/formatTimeAgo";
 
 function NewsItem({ item }) {
   return (

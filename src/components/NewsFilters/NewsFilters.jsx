@@ -1,11 +1,11 @@
-import React from 'react'
-import styles from "./styles.module.css"
-import Categories from '../Categories/Categories'
-import Search from '../Search/Search'
-import { getCategories } from '../../api/apiNews';
-import { useFetch } from '../../helpers/hooks/useFetch';
+import { getCategories } from "../../api/apiNews";
+import { useFetch } from "../../helpers/hooks/useFetch";
+import React from "react";
+import styles from "./styles.module.css";
+import Categories from "../Categories";
+import Search from "../Search";
 
-function NewsFilters({filters,changeFilter}) {
+function NewsFilters({ filters, changeFilter }) {
   const { data: dataCategories } = useFetch(getCategories);
   return (
     <div className={styles.filters}>
@@ -25,4 +25,4 @@ function NewsFilters({filters,changeFilter}) {
   );
 }
 
-export default NewsFilters
+export default NewsFilters;

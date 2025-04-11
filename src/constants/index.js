@@ -1,0 +1,1 @@
+export { TOTAL_PAGES, PAGE_SIZE,DATA_MOCK} from "./constants";
