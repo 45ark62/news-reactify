@@ -1,9 +1,11 @@
 import { formatTimeAgo } from "@helpers/formatTimeAgo";
-import React from "react";
 import styles from "./styles.module.css";
 import Image from "@components/Image";
-
-function NewsBanner({ item }) {
+import { INews } from "@interfaces/index";
+interface Props {
+  item: INews;
+}
+function NewsBanner({ item }:Props) {
   return (
     <div className={styles.banner}>
       <Image image={item?.image} />

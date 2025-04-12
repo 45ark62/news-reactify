@@ -2,12 +2,12 @@ import { useFilters } from "@helpers/hooks/useFilters";
 import { useDebounce } from "@helpers/hooks/useDebounce";
 import { useFetch } from "@helpers/hooks/useFetch";
 import { getNews } from "@api/apiNews";
-import { DATA_MOCK, PAGE_SIZE, TOTAL_PAGES } from "@constants";
-import React from "react";
+import { DATA_MOCK, PAGE_SIZE, TOTAL_PAGES } from "@constants/constants";
 import styles from "./styles.module.css";
 import NewsList from "@components/NewsList";
 import NewsFilters from "@components/NewsFilters";
 import PaginationWrapper from "@components/PaginationWrapper";
+import { NewsApiResponse, ParamsType } from "@interfaces/index";
 
 function NewsByFilters() {
   const { filters, changeFilter } = useFilters({
@@ -19,7 +19,7 @@ function NewsByFilters() {
 
   const debouncedKeywords = useDebounce(filters.keywords, 1500);
 
-  const { data, isLoading } = useFetch(getNews, {
+  const { data, isLoading } = useFetch<NewsApiResponse,ParamsType>(getNews, {
     ...filters,
     keywords: debouncedKeywords,
   });
@@ -34,7 +34,7 @@ function NewsByFilters() {
       changeFilter("page_number", filters.page_number - 1);
     }
   };
-  const handlePageClick = (pageNumber) => {
+  const handlePageClick = (pageNumber:number) => {
     changeFilter("page_number", pageNumber);
   };
   return (

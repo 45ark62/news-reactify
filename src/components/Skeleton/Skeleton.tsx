@@ -1,11 +1,18 @@
-import React from "react";
 import styles from "./styles.module.css";
-
-function Skeleton({ count = 1, type = "banner", direction = "column" }) {
+interface Props {
+  count?: number;
+  type?: "banner" | "item";
+  direction?: string;
+}
+function Skeleton({ count = 1, type = "banner", direction = "column" }: Props) {
   return (
     <>
       {count > 1 ? (
-        <ul className={direction === "column" ? styles.columnList : styles.rowList}>
+        <ul
+          className={
+            direction === "column" ? styles.columnList : styles.rowList
+          }
+        >
           {[...Array(count)].map((_, index) => (
             <li
               key={index}
