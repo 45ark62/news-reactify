@@ -1,6 +1,10 @@
-import React from "react";
 import styles from "./styles.module.css";
-function Search({ keywords, setKeywords }) {
+interface Props {
+  keywords: string;
+  setKeywords: (keywords: string) => void;
+}
+
+function Search({ keywords, setKeywords }: Props) {
   return (
     <div className={styles.search}>
       <input
